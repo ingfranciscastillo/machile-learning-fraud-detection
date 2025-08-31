@@ -12,7 +12,7 @@ Un sistema completo de Machine Learning para detectar fraudes en transacciones d
 
 ## 📋 Requisitos
 
-- Python 3.8+
+- Python
 - Dataset "Credit Card Fraud Detection" de Kaggle (opcional, se genera uno sintético si no está disponible)
 
 ## 🚀 Instalación
