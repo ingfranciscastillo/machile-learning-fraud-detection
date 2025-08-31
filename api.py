@@ -113,6 +113,7 @@ class TransactionData(BaseModel):
     V26: float = Field(..., description="Característica V26 de la transacción")
     V27: float = Field(..., description="Característica V27 de la transacción")
     V28: float = Field(..., description="Característica V28 de la transacción")
+    V29: float = Field(..., description="Característica V29 de la transacción")
     Amount: float = Field(..., description="Monto de la transacción", ge=0)
     
     model_config = {
@@ -146,6 +147,7 @@ class TransactionData(BaseModel):
                 "V26": -0.189115,
                 "V27": 0.133558,
                 "V28": -0.021053,
+                "V29": 0.133558,
                 "Amount": 149.62
             }
         }
@@ -241,7 +243,7 @@ async def predict_fraud(transaction: TransactionData):
         feature_names = [
             'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10',
             'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20',
-            'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28', 'Amount'
+            'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28', 'V29', 'Amount'
         ]
         
         # Extraer valores en el orden correcto

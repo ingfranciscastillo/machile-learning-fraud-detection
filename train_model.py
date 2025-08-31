@@ -251,6 +251,9 @@ def main():
         df = pd.DataFrame(X, columns=columns)
         df['Class'] = y
         
+        print(f"Columnas creadas: {columns}")
+        print(f"Número de características: {len(columns)}")
+        
         print(f"Dataset sintético creado. Shape: {df.shape}")
     
     # Preprocesar datos
